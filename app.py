@@ -11,10 +11,9 @@ import os
 import requests
 import json
 import ast
-from dotenv import load_dotenv
  
 
-load_dotenv()
+
 def detectPII(input_text):
     # Retrieve environment variables
     API_KEY_GPT4 = os.getenv("API_KEY_GPT4")
