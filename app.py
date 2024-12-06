@@ -16,8 +16,9 @@ import ast
 
 def detectPII(input_text):
     # Retrieve environment variables
+    API_KEY_GPT4 = st.secrets["general"]["API_KEY_GPT4"]
     API_KEY_GPT4 = os.getenv("API_KEY_GPT4")
-    print(API_KEY_GPT4)
+    
     endpoint = os.getenv("ENDPOINT_URL", "https://idagptservice.openai.azure.com/")
     deployment = os.getenv("DEPLOYMENT_NAME", "gpt-4")
     prompt =f"""Here is a sample dataset which needs to find PII:  
